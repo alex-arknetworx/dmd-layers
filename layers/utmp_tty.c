@@ -19,7 +19,7 @@
 #include <sys/sysmacros.h>
 #endif
 #ifdef USE_PTMX
-#include <stropts.h>
+//#include <stropts.h>
 #include <signal.h>
 #endif
 #include <fcntl.h>
@@ -566,7 +566,8 @@ char *tty;
 	 *  a process writing data to the slave side can hang and
 	 *  be unkillable on some systems.
 	 */
-	ioctl(fd, I_FLUSH, FLUSHR);
+	//ioctl(fd, I_FLUSH, FLUSHR);
+	ioctl(fd, CFLUSH, FLUSHO);
 #endif
 	(void) close(fd);
 

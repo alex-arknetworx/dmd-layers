@@ -22,7 +22,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #ifdef USE_PTMX
-#include <sys/stropts.h>
+//#include <sys/stropts.h>
 #endif
 #ifdef USE_TERMIOS_H
 #include <sys/termios.h>
@@ -281,10 +281,14 @@ pushmodules(fd)
 int fd;
 {
 #ifdef USE_PTMX
-	(void) ioctl(fd, I_PUSH, "ptem");
-	(void) ioctl(fd, I_PUSH, "ldterm");
-	(void) ioctl(fd, I_PUSH, "smterm");
-	(void) ioctl(fd, I_PUSH, "ttcompat");
+	//(void) ioctl(fd, I_PUSH, "ptem");
+	//(void) ioctl(fd, I_PUSH, "ldterm");
+	//(void) ioctl(fd, I_PUSH, "smterm");
+	//(void) ioctl(fd, I_PUSH, "ttcompat");
+	(void) ioctl(fd, TIOCPKT, "ptem");
+	(void) ioctl(fd, TIOCPKT, "ldterm");
+	(void) ioctl(fd, TIOCPKT, "smterm");
+	(void) ioctl(fd, TIOCPKT, "ttcompat");
 #endif
 
 	return(1);
