@@ -1,4 +1,4 @@
-Connect your AT&T DMD 5620 Terminal Emulator (commercial version of the Blit terminal) to a real Debian Linux host (rather than SIMH emulated UNIX) and run the layers window manager. Screenshot at the end.
+Connect your AT&T DMD 5620 Terminal Emulator (aka the Blit terminal) to a real Debian Linux host (rather than SIMH emulated UNIX) and run the layers window manager. Screenshot at the end.
 
 see https://loomcom.com/3b2/dmd5620-emulator/
 
