@@ -1,4 +1,4 @@
-Connect your AT&T DMD 5620 Terminal Emulator (aka the Blit terminal) to a real Debian Linux host (rather than SIMH emulated UNIX) and run the layers window manager. Screenshot at the end.
+Connect your AT&T DMD 5620 Terminal Emulator (aka the Blit terminal) to a real Debian Linux host (rather than SIMH emulated UNIX) and run the layers window manager. See screenshot at the end.
 
 see https://loomcom.com/3b2/dmd5620-emulator/
 
@@ -16,7 +16,7 @@ sudo make install
 
 This will install the layers software into /usr/local/dmdlayers/bin/
 
-You will then need to configure a serial-getty on your Debian host for either a real serial port or emulated serial port (example though the virtual machine which appears on the bare metal host as /dev/pts/0) by:
+You will then need to configure a serial-getty on your Debian host for either a real serial port or emulated serial port (example through the virtual machine which appears on the bare metal host as /dev/pts/0) by:
 
 sudo nano /lib/systemd/system/serial-getty@.service
 
